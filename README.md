@@ -10,3 +10,6 @@ Magnetic Resonance Imaging (MRI) is an important tool for detecting medical cond
 ## Impact of Domain Specific Data on Training Performance
 Table 1 shows the restoration capabilities, in terms of PSNR, SSIM, LPIPS and Q. The total number of images used was 27,547 crops of size 256 $\times$ 256. 
 
+| Percent | PSNR | SSIM | 
+| ------- | ---- | ---- | 
+| 0       | A    |  C   |

@@ -24,3 +24,13 @@ Table 1 shows the restoration capabilities, in terms of PSNR, SSIM. The total nu
 | 90      | 34.96 | 0.96 |
 | 100     | 35.74 | 0.97 |
 
+As can be seen from the above table, as the percentage of MRI images increases, so do quality metrics such as PSNR and SSIM. Table 2 gives a more detailed overview of the use of MRI data with respect to sharpness metrics such as Q.
+
+| Percent | PSNR | SSIM | LPIPS | $Q$ |
+| ------- | ---- | ---- | ----- | --- |
+| 0       | 35.09 | 0.96 | 0.08 | 0.12 |
+| 10      | 35.10 | 0.96 | 0.08 | 0.12 |
+| 50      | 35.45 | 0.97 | 0.07 | 0.12 | 
+| 100     | 35.74 | 0.97 | 0.07 | 0.12 | 
+
+

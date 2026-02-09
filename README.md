@@ -72,12 +72,12 @@ As can be seen from the table above, using $Q$ as part of the training regime in
 Fig. 4. shows the restoration by a factor of 4 in either direction ($\times$ 16) with different loss functions.
 ![x4LossComp](embc_figs/x4_lossComparison.png)
 | ---- |
-| Fig. 4. Loss Comparison |
-
-
+| Fig. 4. Visual Comparison of using different losses for restoring MRI scans |
 
 ## Conclusions
-
+We have presented an ablation study on the effects of domain specific data and its effects on MRI Super-Resolution. For light-weight Deep Neural Networks ($\sim$ 1.2 Million trainable parameters), we have shown that gradually increasing the share of MRI in the training data for Super Resolution of low-resolution scans improves PSNR, SSIM and LPIPS in a statistically significant way, while leaving sharpness ($Q$) unchanged. To produce overall sharp restored MR images, we extended the use of a sharpness loss $Q$ for Super-Resolution and demonstrate its efficacy at producing restorations which explicitly target sharpness, in turn restoring structures critical for medical diagnoses. We show that for such light-weight networks, the best reconstruction after upsampling by a factor of 4 can be achieved by using $\mathcal{L}_1$ (Mean Absolute Error),
+whereas for producing sharper restorations, we recommend using a combination of $Q$ and $\mathcal{L}_2$ (Mean Squared Error). These observations and nuances provide practical guidance for designing light-weight sharpness aware Deep Neural Networks aimed at upsampling low-resolution MRI scans. 
+Our future work includes performing ablation studies on ultra-heavy sophisticated Deep Neural Networks, such as SwinMR [3] and examining whether the sampling of training data and the complexity of MRI Super-Resolution networks affects the overall reconstruction of brain MRI scans. Addi- tionally, we plan on investigating various degradation mechanisms, including K-space sub-sampling and interpolation based spatial downsampling on moodel performance.
 
 ## References 
 

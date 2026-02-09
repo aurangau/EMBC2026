@@ -33,5 +33,6 @@ As can be seen from the above table, as the percentage of MRI images increases, 
 | 50      | 35.45 | 0.97 | 0.07 | 0.12 | 
 | 100     | 35.74 | 0.97 | 0.07 | 0.12 | 
 
-We must note that performing a paired t-test on the means of the model restored with 10% MRI data and 100% MRI data is statistically significant ($p$ < 0.05) in terms of PSNR and SSIM. It is not significant in terms of $Q$ which we use to measure sharpness. 
+We must note that performing a paired t-test on the means of the model restored with 10% MRI data and 100% MRI data is statistically significant ($p$ < 0.05) in terms of PSNR and SSIM. It is not significant in terms of $Q$ which we use to measure sharpness. This has led use to examine the role of loss functions for producing visually sharper MRI scans. <br />
+A visual example of the images upsampled by a factor of $x$ 4 can be seen in Fig. 1.
 

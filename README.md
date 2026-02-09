@@ -52,9 +52,9 @@ To generate sharper restorations, we employ the loss function developed by Auran
 | Loss | PSNR ↑ | SSIM ↑ | Q ↑ | J ↑ | LPIPS ↓ | BRISQUE ↓ |
 |---|---:|---:|---:|---:|---:|---:|
 | $\mathcal{L}_2$ (MSE) | 29.452 | 0.885 | 0.120 | 0.932 | 0.182 | 42.424 |
-| \( \mathcal{L}_2 + 0.001 \cdot Q \) | 29.407 | 0.886 | 0.119 | 0.934 | 0.183 | 42.309 |
-| \( \mathcal{L}_2 + 0.005 \cdot Q \) | 29.467 | 0.885 | 0.130 | 0.862 | 0.186 | 42.523 |
-| \( \mathcal{L}_2 + 0.010 \cdot Q \) | 28.782 | 0.875 | 0.154 | 0.747 | 0.192 | 43.378 |
+| $mathcal{L}_2$ + 0.001 \cdot $Q$ \) | 29.407 | 0.886 | 0.119 | 0.934 | 0.183 | 42.309 |
+| $mathcal{L}_2$ + 0.005 \cdot $Q$ \) | 29.467 | 0.885 | 0.130 | 0.862 | 0.186 | 42.523 |
+| $mathcal{L}_2$ + 0.010 \cdot $Q$ \) | 28.782 | 0.875 | 0.154 | 0.747 | 0.192 | 43.378 |
 | \( \mathcal{L}_1 \) (MAE) | 29.777 | 0.895 | 0.126 | 0.895 | 0.174 | 42.224 |
 | \( \mathcal{L}_1 + 0.001 \cdot Q \) | 29.773 | 0.893 | 0.123 | 0.920 | 0.173 | 42.781 |
 | \( \mathcal{L}_1 + 0.005 \cdot Q \) | 29.782 | 0.894 | 0.122 | 0.921 | 0.175 | 43.064 |
@@ -63,6 +63,10 @@ To generate sharper restorations, we employ the loss function developed by Auran
 | \( \mathcal{L}_{SSIM} + 0.001 \cdot Q \) | 29.404 | 0.899 | 0.130 | 0.867 | 0.174 | 43.681 |
 | \( \mathcal{L}_{SSIM} + 0.005 \cdot Q \) | 29.437 | 0.841 | 0.125 | 0.902 | 0.178 | 43.823 |
 | \( \mathcal{L}_{SSIM} + 0.010 \cdot Q \) | 29.351 | 0.895 | 0.127 | 0.890 | 0.177 | 44.405 |
+
+## Conclusions
+
+## References 
 
 
 

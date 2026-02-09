@@ -4,7 +4,7 @@ Supplementary Material for IEEE EMBC
 Authors: <samp>{aurangau, friedrich.wetterling, anil.kokaram}@tcd.ie</samp
 
 ## Abstract
-Magnetic Resonance Imaging (MRI) is an important tool for detecting medical conditions. Although low-field MRI scanners enable quick acquisition, resulting images are low resolution and blurry and noisy, requiring sophisticated upsampling methods. Deep Learning (DL) methods offer cost efficient, quick and high quality solutions. However, the impact of training data on brain MRI restoration quality, directly affecting diagnostic reliability remain under-explored. We explored different combinations of MRI and natural world images as part of the training data for DL-based methods aimed at upsampling Low-Resolution MRI scans by factors of 2 and 4. We showed that training lightweight Deep Neural Networks (DNNs) using only MRI scans significantly improved overall restoration quality measured by Peak Signal-to-Noise Ratio (PSNR), but not sharpness, leading us to examine the role of loss functions for generating sharper restorations. We designed and trained a lightweight U-Net based Super-Resolution (SR) architecture with widely used losses, i.e. Mean Squared Error (MSE), Mean Absolute Error (MAE) and Structural Similarity (SSIM) and incorporated a sharpness loss Q, originally designed for deblurring, but not MRI SR. We showed that incorporating such losses that explicitly target sharpness, not only led to visibly sharper restorations, but also to gains in overall quality of upsampled MRI.
+Magnetic Resonance Imaging (MRI) is an important tool for detecting medical conditions. Although low-field MRI scanners enable quick acquisition, resulting images are low resolution and blurry and noisy, requiring sophisticated upsampling methods. Deep Learning (DL) methods offer cost efficient, quick and high quality solutions. However, the impact of training data on brain MRI restoration quality, directly affecting diagnostic reliability remain under-explored. We explored different combinations of MRI and natural world images as part of the training data for DL-based methods aimed at upsampling Low-Resolution MRI scans by factors of 2 and 4. We showed that training lightweight Deep Neural Networks (DNNs) using only MRI scans significantly improved overall restoration quality measured by Peak Signal-to-Noise Ratio (PSNR), but not sharpness, leading us to examine the role of loss functions for generting sharper restorations. We designed and trained a lightweight U-Net based Super-Resolution (SR) architecture with widely used losses, i.e. Mean Squared Error (MSE), Mean Absolute Error (MAE) and Structural Similarity (SSIM) and incorporated a sharpness loss Q, originally designed for deblurring, but not MRI SR. We showed that incorporating such losses that explicitly target sharpness, not only led to visibly sharper restorations, but also to gains in overall quality of upsampled MRI.
 
 
 ## Impact of Domain Specific Data on Training Performance
@@ -48,5 +48,20 @@ For restoring the MRI scans, we developed a U-Net based model which is lightweig
 | Fig. 2. ARKNet-Lite Model Architecture |
 
 ## Generating Sharper Restorations
+To generate sharper restorations, we employ the loss function developed by Aurangabadkar et. al. [1] which explicitly targets sharpness. The loss is based on a no-reference metric $Q$ developed by Zhu and Milanfar. However, as the loss is no-reference, we must use a primary loss such as Mean Squared Error (MSE), Mean Absolute Error (MAE) and Structural Similarity (SSIM). We also compare these losses with and without $Q$. We must note that all the values are for upsampling by a factor of 4 in each direction ($\times$ 16).
+| Loss                                                         | PSNR ↑ | SSIM ↑ | Q ↑   | J ↑   | LPIPS ↓ | BRISQUE ↓ |
+| ------------------------------------------------------------ | ------ | ------ | ----- | ----- | ------- | --------- |
+| L2\\mathcal{L}_2L2 (MSE)                                     | 29.452 | 0.885  | 0.120 | 0.932 | 0.182   | 42.424    |
+| L2+0.001⋅Q\\mathcal{L}_2 + 0.001 \\cdot QL2+0.001⋅Q          | 29.407 | 0.886  | 0.119 | 0.934 | 0.183   | 42.309    |
+| L2+0.005⋅Q\\mathcal{L}_2 + 0.005 \\cdot QL2+0.005⋅Q          | 29.467 | 0.885  | 0.130 | 0.862 | 0.186   | 42.523    |
+| L2+0.010⋅Q\\mathcal{L}_2 + 0.010 \\cdot QL2+0.010⋅Q          | 28.782 | 0.875  | 0.154 | 0.747 | 0.192   | 43.378    |
+| L1\\mathcal{L}_1L1 (MAE)                                     | 29.777 | 0.895  | 0.126 | 0.895 | 0.174   | 42.224    |
+| L1+0.001⋅Q\\mathcal{L}_1 + 0.001 \\cdot QL1+0.001⋅Q          | 29.773 | 0.893  | 0.123 | 0.920 | 0.173   | 42.781    |
+| L1+0.005⋅Q\\mathcal{L}_1 + 0.005 \\cdot QL1+0.005⋅Q          | 29.782 | 0.894  | 0.122 | 0.921 | 0.175   | 43.064    |
+| L1+0.010⋅Q\\mathcal{L}_1 + 0.010 \\cdot QL1+0.010⋅Q          | 29.461 | 0.882  | 0.126 | 0.896 | 0.000   | 42.860    |
+| LSSIM\\mathcal{L}_{SSIM}LSSIM (SSIM)                         | 29.229 | 0.896  | 0.134 | 0.839 | 0.176   | 43.668    |
+| LSSIM+0.001⋅Q\\mathcal{L}_{SSIM} + 0.001 \\cdot QLSSIM+0.001⋅Q | 29.404 | 0.899  | 0.130 | 0.867 | 0.174   | 43.681    |
+| LSSIM+0.005⋅Q\\mathcal{L}_{SSIM} + 0.005 \\cdot QLSSIM+0.005⋅Q | 29.437 | 0.841  | 0.125 | 0.902 | 0.178   | 43.823    |
+| LSSIM+0.010⋅Q\\mathcal{L}_{SSIM} + 0.010 \\cdot QLSSIM+0.010⋅Q | 29.351 | 0.895  | 0.127 | 0.890 | 0.177   | 44.405    |
 
 

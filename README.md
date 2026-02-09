@@ -67,7 +67,12 @@ To generate sharper restorations, we employ the loss function developed by Auran
 As can be seen from the table above, using $Q$ as part of the training regime increases the overall quality, as well as, overall sharpness of the restored MRI. A visual example of using $\mathcal{L}_2$ with and without $Q$ to produce sharper and overall clearer restorations, can be seen in Fig. 3.
 ![x4Example](embc_figs/x4_trainingComparison_label.png)
 | ---- |
-| Fig.3. Visual comparison of usng $Q$ to produce visually sharper restorations | 
+| Fig. 3. Visual comparison of usng $Q$ to produce visually sharper restorations | 
+
+Fig. 4. shows the restoration by a factor of 4 in either direction ($\times$ 16) with different loss functions.
+![x4LossComp](embc_figs/x4_lossComparison.png)
+| ---- |
+| Fig. 4. Loss Comparison |
 
 
 

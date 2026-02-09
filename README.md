@@ -64,7 +64,12 @@ To generate sharper restorations, we employ the loss function developed by Auran
 | $\mathcal{L}_{SSIM}$ + 0.005 $\cdot$ $Q$ | 29.437 | 0.841 | 0.125 | 0.902 | 0.178 | 43.823 |
 | $\mathcal{L}_{SSIM}$ + 0.010 $\cdot$ $Q$ | 29.351 | 0.895 | 0.127 | 0.890 | 0.177 | 44.405 |
 
-As can be seen from the table above, using $Q$ as part of the training regime increases the overall quality, as well as, overall sharpness of the restored MRI. 
+As can be seen from the table above, using $Q$ as part of the training regime increases the overall quality, as well as, overall sharpness of the restored MRI. A visual example of using $\mathcal{L}_2$ with and without $Q$ to produce sharper and overall clearer restorations, can be seen in Fig. 3.
+![x4Example](embc_figs/x4_trainingComparison_label.png)
+| ---- |
+| Fig.3. Visual comparison of usng $Q$ to produce visually sharper restorations | 
+
+
 
 ## Conclusions
 

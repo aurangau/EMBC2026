@@ -51,7 +51,7 @@ For restoring the MRI scans, we developed a U-Net based model which is lightweig
 To generate sharper restorations, we employ the loss function developed by Aurangabadkar et. al. [1] which explicitly targets sharpness. The loss is based on a no-reference metric $Q$ developed by Zhu and Milanfar. However, as the loss is no-reference, we must use a primary loss such as Mean Squared Error (MSE), Mean Absolute Error (MAE) and Structural Similarity (SSIM). We also compare these losses with and without $Q$. We must note that all the values are for upsampling by a factor of 4 in each direction ($\times$ 16).
 | Loss | PSNR ↑ | SSIM ↑ | Q ↑ | J ↑ | LPIPS ↓ | BRISQUE ↓ |
 |---|---:|---:|---:|---:|---:|---:|
-| \( \mathcal{L}_2 \) (MSE) | 29.452 | 0.885 | 0.120 | 0.932 | 0.182 | 42.424 |
+| $\mathcal{L}_2$ (MSE) | 29.452 | 0.885 | 0.120 | 0.932 | 0.182 | 42.424 |
 | \( \mathcal{L}_2 + 0.001 \cdot Q \) | 29.407 | 0.886 | 0.119 | 0.934 | 0.183 | 42.309 |
 | \( \mathcal{L}_2 + 0.005 \cdot Q \) | 29.467 | 0.885 | 0.130 | 0.862 | 0.186 | 42.523 |
 | \( \mathcal{L}_2 + 0.010 \cdot Q \) | 28.782 | 0.875 | 0.154 | 0.747 | 0.192 | 43.378 |

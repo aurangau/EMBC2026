@@ -80,7 +80,7 @@ whereas for producing sharper restorations, we recommend using a combination of 
 Our future work includes performing ablation studies on ultra-heavy sophisticated Deep Neural Networks, such as SwinMR [3] and examining whether the sampling of training data and the complexity of MRI Super-Resolution networks affects the overall reconstruction of brain MRI scans. Addi- tionally, we plan on investigating various degradation mechanisms, including K-space sub-sampling and interpolation based spatial downsampling on moodel performance.
 
 ## References 
-[1] Uditangshu Aurangabadkar, Darren Ramsook, and Anil Kokaram, “A sharpness based loss function for removing out-of-focus blur,” in 2024 IEEE 26th International Workshop on Multimedia Signal Processing (MMSP), 2024, pp. 1–6.
+[1] Uditangshu Aurangabadkar, Darren Ramsook, and Anil Kokaram, “A sharpness based loss function for removing out-of-focus blur,” in 2024 IEEE 26th International Workshop on Multimedia Signal Processing (MMSP), 2024, pp. 1–6. </br>
 [2] Xiang Zhu and Peyman Milanfar, “Automatic parameter selection for denoising algorithms using a no-reference measure of image content,” IEEE transactions on image processing, vol. 19, no. 12, pp. 3116–3132, 2010.
 [3] Jiahao Huang, Yingying Fang, Yinzhe Wu, Huanjun Wu, Zhifan Gao, Yang Li, Javier Del Ser, Jun Xia, and Guang Yang, “Swin transformer for fast mri,” Neurocomputing, vol. 493, pp. 281–304, 2022.
 

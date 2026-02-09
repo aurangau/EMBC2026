@@ -41,4 +41,5 @@ A visual example of the images upsampled by a factor of $\times$ 2 can be seen i
 
 As can be seen, as the percentage of MRI data increases, we start to regain certainn features and high-frequency information, thus leading to better PSNR and SSIM. We, however, do not see any increase in overall sharpness of the restorations.
 
+## Model Architecture
 

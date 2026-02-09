@@ -1,6 +1,6 @@
 # Supplementary Material for EMBC2026
 Supplementary Material for IEEE EMBC 
-**Structural Loss Functions Enhance Super-Resolution Performance with Mixed MRI and Non-Domain Training Data** <br />
+**Structural Loss Functions Enhance Super-Resolution Performance with Mixed MRI and Non-Domain Training Data** <br /
 Authors: <samp>{aurangau, friedrich.wetterling, anil.kokaram}@tcd.ie</samp>
 
 ## Abstract
@@ -42,4 +42,4 @@ A visual example of the images upsampled by a factor of $\times$ 2 can be seen i
 As can be seen, as the percentage of MRI data increases, we start to regain certainn features and high-frequency information, thus leading to better PSNR and SSIM. We, however, do not see any increase in overall sharpness of the restorations.
 
 ## Model Architecture
-
+For restoring the MRI scans, we developed a U-Net based model which is lightweight ($\sim$ 1.2 Million Trainable Parameters). The model, titled ARKNet-Lite, consists of three encoder blocks, followed by a bridge layer and three decoder blocks. Each encoder and decoder block consists of three convolution blocks. Convolution blocks, in turn, comprise of a single 3 $\times$ 3 convolution layer, followed by Batch Normalization and GeLU activation. For down-sampling in between layers, we use MaxPooling. The filter configuration was set to [16, 32, 64].

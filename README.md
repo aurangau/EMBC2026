@@ -34,6 +34,10 @@ As can be seen from the above table, as the percentage of MRI images increases, 
 | 100     | 35.74 | 0.97 | 0.07 | 0.12 | 
 
 We must note that performing a paired t-test on the means of the model restored with 10% MRI data and 100% MRI data is statistically significant ($p$ < 0.05) in terms of PSNR and SSIM. It is not significant in terms of $Q$ which we use to measure sharpness. This has led us to examine the role of loss functions for producing visually sharper MRI scans. <br />
-A visual example of the images upsampled by a factor of $\times$ 4 can be seen in Fig. 1. 
+A visual example of the images upsampled by a factor of $\times$ 2 can be seen in Fig. 1. 
 ![x2_Montage](embc_figs/x2_datasetMontage_t2.png)
+| ---- |
+| Fig. 1. Impact of MRI data on overall MRI reconstruction |
+As can be seen, as the percentage of MRI data increases, we start to regain certainn features and high-frequency information, thus leading to better PSNR and SSIM. We, however, do not see any increase in overall sharpness of the restorations.
+
 

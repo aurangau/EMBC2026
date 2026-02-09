@@ -47,4 +47,6 @@ For restoring the MRI scans, we developed a U-Net based model which is lightweig
 | ---- |
 | Fig. 2. ARKNet-Lite Model Architecture |
 
+## Generating Sharper Restorations
+
 
